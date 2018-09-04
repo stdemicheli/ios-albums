@@ -8,14 +8,14 @@
 
 import Foundation
 
-class Album: Decodable {
+struct Album: Decodable, Equatable {
     
     let id: String
-    let name: String
-    let artist: String
-    let genres: [String]
-    let coverURLs: [URL]
-    let songs: [Song]
+    var name: String
+    var artist: String
+    var genres: [String]
+    var coverURLs: [URL]
+    var songs: [Song]
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -31,7 +31,16 @@ class Album: Decodable {
 
     }
     
-    required init(from decoder: Decoder) throws {
+    init(name: String, artist: String, genres: [String], coverURLs: [URL], songs: [Song], id: String = UUID().uuidString) {
+        self.id = id
+        self.name = name
+        self.artist = artist
+        self.genres = genres
+        self.coverURLs = coverURLs
+        self.songs = songs
+    }
+    
+    init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(String.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
@@ -58,11 +67,11 @@ class Album: Decodable {
     
 }
 
-class Song: Decodable {
+struct Song: Decodable, Equatable {
     
-    let id: String
-    let name: String
-    let duration: String
+    var id: String
+    var name: String
+    var duration: String
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -78,7 +87,13 @@ class Song: Decodable {
         }
     }
     
-    required init(from decoder: Decoder) throws {
+    init(name: String, duration: String, id: String = UUID().uuidString) {
+        self.id = id
+        self.name = name
+        self.duration = duration
+    }
+    
+    init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(String.self, forKey: .id)
         

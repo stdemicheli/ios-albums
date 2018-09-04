@@ -16,6 +16,7 @@
 		3D97CBCD213E95DA0090E507 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97CBCC213E95DA0090E507 /* SongTableViewCell.swift */; };
 		3D97CBCF213E965A0090E507 /* exampleAlbum.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D97CBCE213E965A0090E507 /* exampleAlbum.json */; };
 		3D97CBD1213E96740090E507 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97CBD0213E96740090E507 /* Album.swift */; };
+		3D97CBD4213EB4EC0090E507 /* AlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D97CBD3213EB4EC0090E507 /* AlbumController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3D97CBCC213E95DA0090E507 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		3D97CBCE213E965A0090E507 /* exampleAlbum.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = exampleAlbum.json; path = ../../../exampleAlbum.json; sourceTree = "<group>"; };
 		3D97CBD0213E96740090E507 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		3D97CBD3213EB4EC0090E507 /* AlbumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				3D97CBB3213E819B0090E507 /* AppDelegate.swift */,
 				3D97CBC6213E81AB0090E507 /* Models */,
+				3D97CBD2213EB4D00090E507 /* ModelControllers */,
 				3D97CBC5213E81A30090E507 /* ViewControllers */,
 				3D97CBC7213E81B20090E507 /* Resources */,
 				3D97CBBF213E819C0090E507 /* Info.plist */,
@@ -98,6 +101,14 @@
 				3D97CBCE213E965A0090E507 /* exampleAlbum.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3D97CBD2213EB4D00090E507 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D97CBD3213EB4EC0090E507 /* AlbumController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D97CBCD213E95DA0090E507 /* SongTableViewCell.swift in Sources */,
+				3D97CBD4213EB4EC0090E507 /* AlbumController.swift in Sources */,
 				3D97CBB4213E819B0090E507 /* AppDelegate.swift in Sources */,
 				3D97CBCB213E8CCD0090E507 /* AlbumDetailTableViewController.swift in Sources */,
 				3D97CBC9213E81EF0090E507 /* AlbumsTableViewController.swift in Sources */,
